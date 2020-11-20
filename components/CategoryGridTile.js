@@ -14,13 +14,13 @@ export default function CategoryGridTile(props) {
     TouchableCmp = TouchableNativeFeedback;
   }
   return (
-    <view style={styles.gridItem}>
+    <View style={styles.gridItem}>
       <TouchableCmp style={{ flex: 1 }} onPress={props.onSelect}>
-        <View style={styles.container}>
+        <View style={[styles.container, { backgroundColor: props.color }]}>
           <Text style={styles.title}>{props.title}</Text>
         </View>
       </TouchableCmp>
-    </view>
+    </View>
   );
 }
 
